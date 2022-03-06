@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Lobster&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.section-container {
+  padding-top: 50px;
+  min-height: calc(100vh - 50px);
+}
+
+.btn {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 3rem;
+  border-radius: 0.6rem;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: linear-gradient(132deg, #ff9e9e 0%, red 100%);
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  color: #3c3232;
+}
+
+header {
+  font-family: "Fira Sans", sans-serif;
+  height: 50px;
+  width: 100%;
+  background-color: #505050;
+  color: #c8c8c8;
+  position: fixed;
+  top: 0;
+}
+header .container {
+  max-width: 50rem;
+  margin-left: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+header ul {
+  display: flex;
+  gap: 3rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+#section-1 {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+}
+#section-1 .container {
+  max-width: 60rem;
+  margin: auto;
+}
+#section-1 .hero {
+  padding-top: 20vh;
+}
+#section-1 .hero__subtitle {
+  font-size: 2rem;
+}
+#section-1 .hero__title {
+  font-family: "Lobster", sans-serif;
+  font-size: 7rem;
+  margin: 1rem 0 2rem -1rem;
+}
+
+#section-2 {
+  background: white;
+}
+
+/*# sourceMappingURL=main.css.map */

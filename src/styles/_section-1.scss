@@ -1,0 +1,19 @@
+#section-1 {
+    background-image: url("./assets/bg.jpg");
+    background-size: cover;
+    .container {
+        max-width: 60rem;
+        margin: auto;
+    }
+    .hero {
+        padding-top: 20vh;
+        &__subtitle {
+            font-size: 2rem;
+        }
+        &__title {
+            @include font-special;
+            font-size: 7rem;
+            margin: 1rem 0 2rem -1rem;
+        }
+    }
+}

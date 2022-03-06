@@ -1,0 +1,19 @@
+{
+  "name": "personal-page-2",
+  "version": "2.0.0",
+  "description": "Personal portfoliopage",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass -w ./src/styles/main.scss ./src/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMR211/personal-page-2.git"
+  },
+  "author": "cmr211",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CMR211/personal-page-2/issues"
+  },
+  "homepage": "https://github.com/CMR211/personal-page-2#readme"
+}

@@ -1,0 +1,9 @@
+$header-width: 50px;
+
+@mixin font-special {
+    font-family: "Lobster", sans-serif;
+}
+
+@mixin font-regular {
+    font-family: "Fira Sans", sans-serif;
+}
