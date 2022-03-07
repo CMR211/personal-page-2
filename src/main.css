@@ -33,10 +33,11 @@ a {
   padding: 1rem 3rem;
   border-radius: 0.6rem;
   font-weight: 700;
+  transition: 200ms;
 }
 
 .btn-primary:hover {
-  background-color: linear-gradient(132deg, #ff9e9e 0%, red 100%);
+  background-color: rgba(255, 128, 55, 0.3);
 }
 
 body {
@@ -45,28 +46,39 @@ body {
   color: #3c3232;
 }
 
-header {
+#header {
+  z-index: 2;
+  background-color: transparent;
   font-family: "Fira Sans", sans-serif;
   height: 50px;
   width: 100%;
-  background-color: #505050;
-  color: #c8c8c8;
+  color: inherit;
   position: fixed;
   top: 0;
 }
-header .container {
+#header .container {
   max-width: 50rem;
   margin-left: 3rem;
   height: 100%;
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 6rem;
 }
-header ul {
+#header .logo {
+  font-size: 2rem;
+}
+#header ul {
   display: flex;
   gap: 3rem;
   text-decoration: none;
   list-style: none;
+}
+#header li {
+  border-bottom: 2px solid transparent;
+  transition: 300ms;
+}
+#header li:hover {
+  border-bottom: 2px solid currentColor;
 }
 
 #section-1 {
@@ -78,15 +90,58 @@ header ul {
   margin: auto;
 }
 #section-1 .hero {
-  padding-top: 20vh;
+  padding: 20vh 3rem;
+  max-width: max-content;
 }
 #section-1 .hero__subtitle {
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 #section-1 .hero__title {
-  font-family: "Lobster", sans-serif;
-  font-size: 7rem;
-  margin: 1rem 0 2rem -1rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: clamp(3rem, 10vw, 7rem);
+  margin: 0.5rem 0 0.5rem -0.8rem;
+  letter-spacing: 4px;
+}
+#section-1 .hero .suffix {
+  text-align: right;
+}
+#section-1 .hero .btn {
+  font-size: clamp(0.8rem, 4vw, 1.5rem);
+  margin-top: 2rem;
+  float: right;
+  display: flex;
+  align-items: center;
+  transition: 300ms;
+}
+#section-1 .hero .arrow {
+  background-color: currentColor;
+  height: 4px;
+  border-radius: 2px;
+}
+#section-1 .hero .line {
+  margin-left: 20px;
+  width: 30px;
+  transition: 300ms ease-in-out;
+}
+#section-1 .hero .pointer1 {
+  width: 16px;
+  transform-origin: right;
+  transform: translateX(-17px) rotate(45deg);
+}
+#section-1 .hero .pointer2 {
+  width: 16px;
+  transform-origin: right;
+  transform: translateX(-33px) rotate(-45deg);
+}
+#section-1 .hero .btn:hover .line {
+  width: 100px;
+}
+
+.ballon {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 5rem;
 }
 
 #section-2 {

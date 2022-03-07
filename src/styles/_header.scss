@@ -1,4 +1,6 @@
-header {
+#header {
+    z-index: 2;
+    background-color: transparent;
     @include font-regular;
     .container {
         max-width: 50rem;
@@ -6,18 +8,27 @@ header {
         height: 100%;
         display: flex;
         align-items: center;
-        gap: 5rem;
+        gap: 6rem;
     }
     height: $header-width;
     width: 100%;
-    background-color: rgb(80, 80, 80);
-    color: rgb(200,200,200);
+    color: inherit;
     position: fixed;
     top: 0;
+    .logo {
+        font-size: 2rem;
+    }
     ul {
         display: flex;
         gap: 3rem;
         text-decoration: none;
         list-style: none;
+    }
+    li {
+        border-bottom: 2px solid transparent;
+        transition: 300ms;
+    }
+    li:hover {
+        border-bottom: 2px solid currentColor;
     }
 }

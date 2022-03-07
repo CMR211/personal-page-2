@@ -6,14 +6,57 @@
         margin: auto;
     }
     .hero {
-        padding-top: 20vh;
+        padding: 20vh 3rem;
+        max-width: max-content;
         &__subtitle {
-            font-size: 2rem;
+            font-size: clamp(1rem, 5vw, 2rem);
         }
         &__title {
-            @include font-special;
-            font-size: 7rem;
-            margin: 1rem 0 2rem -1rem;
+            @include font-regular;
+            font-size: clamp(3rem, 10vw, 7rem);
+            margin: 0.5rem 0 0.5rem -0.8rem;
+            letter-spacing: 4px;
+        }
+        .suffix {
+            text-align: right;
+        }
+        .btn {
+            font-size: clamp(0.8rem, 4vw, 1.5rem);
+            margin-top: 2rem;
+            float: right;
+            display: flex;
+            align-items: center;
+            transition: 300ms;
+        }
+        .arrow {
+            background-color: currentColor;
+            height: 4px;
+            border-radius: 2px;
+        }
+        .line {
+            margin-left: 20px;
+            width: 30px;
+            transition: 300ms ease-in-out;
+        }
+        .pointer1 {
+            width: 16px;
+            transform-origin: right;
+            transform: translateX(-17px) rotate(45deg);
+        }
+        .pointer2 {
+            width: 16px;
+            transform-origin: right;
+            transform: translateX(-33px) rotate(-45deg);
+        }
+        .btn:hover .line {
+            width: 100px;
         }
     }
+}
+
+.ballon {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 5rem;
 }

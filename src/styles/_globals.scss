@@ -21,12 +21,9 @@
     padding: 1rem 3rem;
     border-radius: 0.6rem;
     font-weight: 700;
+    transition: 200ms;
 }
 
 .btn-primary:hover {
-    background-color: linear-gradient(
-        132deg,
-        rgba(255, 158, 158, 1) 0%,
-        rgba(255, 0, 0, 1) 100%
-    );
+    background-color: rgba(255, 128, 55, 0.3);
 }
