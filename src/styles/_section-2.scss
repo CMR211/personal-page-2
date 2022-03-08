@@ -1,3 +1,27 @@
 #section-2 {
     background: white;
+    position: relative;
+    overflow: hidden;
+    .section-container {
+    }
+    .container {
+        padding: 5rem 3rem;
+        max-width: 50rem;
+        margin: auto;
+    }
+    .title {
+        font-size: 7rem;
+    }
+    p {
+        margin: 2rem 0;
+    }
+    .project {
+        margin: 2rem;
+        padding: 2rem;
+        background-size: cover;
+        .project-img {
+            width: 1024px;
+            height: 768px;
+        }
+    }
 }

@@ -53,10 +53,14 @@
         }
     }
 }
+.ballon-container {
+    position: absolute;
+}
 
 .ballon {
+    z-index: 0;
+    color: #c28555;
     position: absolute;
-    top: 20%;
-    left: 10%;
+    transform: rotate(-1deg);
     width: 5rem;
 }

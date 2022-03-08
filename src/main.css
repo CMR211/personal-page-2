@@ -40,6 +40,10 @@ a {
   background-color: rgba(255, 128, 55, 0.3);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -137,15 +141,42 @@ body {
   width: 100px;
 }
 
-.ballon {
+.ballon-container {
   position: absolute;
-  top: 20%;
-  left: 10%;
+}
+
+.ballon {
+  z-index: 0;
+  color: #c28555;
+  position: absolute;
+  transform: rotate(-1deg);
   width: 5rem;
 }
 
 #section-2 {
   background: white;
+  position: relative;
+  overflow: hidden;
+}
+#section-2 .container {
+  padding: 5rem 3rem;
+  max-width: 50rem;
+  margin: auto;
+}
+#section-2 .title {
+  font-size: 7rem;
+}
+#section-2 p {
+  margin: 2rem 0;
+}
+#section-2 .project {
+  margin: 2rem;
+  padding: 2rem;
+  background-size: cover;
+}
+#section-2 .project .project-img {
+  width: 1024px;
+  height: 768px;
 }
 
 /*# sourceMappingURL=main.css.map */
