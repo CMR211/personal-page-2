@@ -175,7 +175,6 @@ main {
 
 #section-2 {
   scroll-snap-align: start;
-  background: white;
   position: relative;
 }
 #section-2 .container {
@@ -187,7 +186,6 @@ main {
   font-size: 7rem;
 }
 #section-2 .project {
-  scroll-snap-align: start;
   padding-top: 3rem;
 }
 #section-2 .project__num {
@@ -219,6 +217,7 @@ main {
   padding: 2rem 0;
 }
 #section-2 .project__img {
+  scroll-snap-align: center;
   border-radius: 5px;
   max-width: 100%;
 }

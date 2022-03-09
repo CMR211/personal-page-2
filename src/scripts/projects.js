@@ -7,7 +7,8 @@ const projects = [
         folder: "./assets/crypto-app/",
         bigImgs: 5,
         smallImgs: 2,
-        bgcolor: "#fcede0",
+        bgcolor: "#FEF8F3",
+        color: "rgb(60, 50, 50)"
     },
     {
         id: 2,
@@ -17,9 +18,20 @@ const projects = [
         folder: "./assets/advent-of-code/",
         bigImgs: 2,
         smallImgs: 0,
-        bgcolor: "#0f0f23",
+        bgcolor: "#39304a",
+        color: "white"
     },
-    
+    {
+        id: 3,
+        title: "FEM Space tourism website",
+        desc: "My take on frontendmentor.io challenge of creating a responsive space tourism website. As a self goal I have added a possibility to refreshlessly change the language. This was my first project I tried React, learning everything on the fly.",
+        url: "https://cmr211-fem-space-tourism-website.netlify.app",
+        folder: "./assets/space-tourism-website/",
+        bigImgs: 4,
+        smallImgs: 4,
+        bgcolor: "#2E365B",
+        color: "white"
+    },
 ]
 
 for (let project of projects) {
@@ -58,12 +70,27 @@ for (let i = 1; i <= projects.length; i++) {
             scroller: "main",
             start: "top 80%",
             end: "bottom 20%",
-            toggleActions: "restart pause reverse pause",
-            markers: true
+            toggleActions: "play reverse play reverse",
         },
         opacity: 0,
         y: -20,
         stagger: 0.25,
         duration: 0.5,
+    })
+}
+
+for (let i = 1; i <= projects.length; i++) {
+    gsap.to("main", {
+        scrollTrigger: {
+            trigger: `#project-${i}`,
+            scroller: "main",
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play reset play reset",
+            markers: true,
+        },
+        backgroundColor: projects[i - 1].bgcolor,
+        color: projects[i-1].color,
+        duration: 0,
     })
 }

@@ -1,6 +1,5 @@
 #section-2 {
     scroll-snap-align: start;
-    background: white;
     position: relative;
     .container {
         padding: 3rem 3rem;
@@ -11,7 +10,6 @@
         font-size: 7rem;
     }
     .project {
-        scroll-snap-align: start;
         padding-top: 3rem;
         @mixin borderbottom {
             border-bottom: 10px solid currentColor;
@@ -45,7 +43,7 @@
             padding: 2rem 0;
         }
         &__img {
-            // border: 2px solid currentColor;
+            scroll-snap-align: center;
             border-radius: 5px;
             max-width: 100%;
             &--big {
