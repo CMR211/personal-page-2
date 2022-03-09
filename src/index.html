@@ -21,35 +21,38 @@
             </ul>
         </div>
     </header>
-
-    <section class="section" id="section-1">
-        <div class="section-container" id="section-1_link">
-            <div class="container">
-                <div class="hero">
-                    <p class="hero__subtitle prefix anim1a">Hello, my name is</p>
-                    <h1 class="hero__title anim1a">βartosz Surma</h1>
-                    <p class="hero__subtitle suffix anim1a">And I am an aspiring developer</p>
-                    <button href="#section-2" class="btn btn-borderless anim1b" id="hero4">
-                        See my portfolio
-                        <div class="arrow line"></div>
-                        <div class="arrow pointer1"></div>
-                        <div class="arrow pointer2"></div>
-                    </button>
+    <main>
+        <section class="section" id="section-1">
+            <div class="section-container" id="section-1_link">
+                <div class="container">
+                    <div class="hero">
+                        <p class="hero__subtitle prefix anim1a">Hello, my name is</p>
+                        <h1 class="hero__title anim1a">βartosz Surma</h1>
+                        <p class="hero__subtitle suffix anim1a">And I am an aspiring developer</p>
+                        <button href="#section-2" class="btn btn-borderless anim1b" id="section1button">
+                            See my portfolio
+                            <div class="arrow line"></div>
+                            <div class="arrow pointer1"></div>
+                            <div class="arrow pointer2"></div>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+            <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path fill="currentColor" d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/></svg>
+        </section>
 
-    </section>
+        <section class="section" id="section-2">
+            <div class="section-container" id="section-2_link">
+                <div class="container" id="projects-container">
+                    <h1 class="title anim2">My portfolio.</h1>
 
-    <section class="section" id="section-2">
-        <div class="section-container" id="section-2_link">
-            <div class="container">
-                <h1 class="title anim2">My portfolio.</h1>
+                    
+
+                </div>
+
             </div>
-            
-        </div>
-    </section>
-
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
@@ -57,8 +60,9 @@
 
     <!-- Animations -->
     <!-- <script src="scripts/ballons.js"></script> -->
-    <script src="scripts/section-1.js" type=""></script>
-    <script src="scripts/section-2.js" type=""></script>
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/hero-button.js" type=""></script>
+    <script src="scripts/animations.js" type=""></script>
     <script src="scripts/header.js" type=""></script>
 </body>
 

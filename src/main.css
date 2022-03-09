@@ -42,12 +42,20 @@ a {
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   color: #3c3232;
+  overflow: hidden;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: block mandatory;
 }
 
 #header {
@@ -86,6 +94,7 @@ body {
 }
 
 #section-1 {
+  scroll-snap-align: start;
   background-image: url("./assets/bg.jpg");
   background-size: cover;
 }
@@ -140,6 +149,17 @@ body {
 #section-1 .hero .btn:hover .line {
   width: 100px;
 }
+#section-1 .down-arrow {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transition: 300ms;
+}
+#section-1 .down-arrow:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
 
 .ballon-container {
   position: absolute;
@@ -154,29 +174,59 @@ body {
 }
 
 #section-2 {
+  scroll-snap-align: start;
   background: white;
   position: relative;
-  overflow: hidden;
 }
 #section-2 .container {
-  padding: 5rem 3rem;
-  max-width: 50rem;
+  padding: 3rem 3rem;
+  max-width: 60rem;
   margin: auto;
 }
 #section-2 .title {
   font-size: 7rem;
 }
-#section-2 p {
+#section-2 .project {
+  scroll-snap-align: start;
+  padding-top: 3rem;
+}
+#section-2 .project__num {
+  font-size: 4rem;
+  margin-bottom: -6rem;
+  text-align: right;
+}
+#section-2 .project__title {
+  border-bottom: 10px solid currentColor;
+  font-size: 3rem;
   margin: 2rem 0;
 }
-#section-2 .project {
-  margin: 2rem;
-  padding: 2rem;
-  background-size: cover;
+#section-2 .project__desc {
+  text-align: justify;
+  margin: 2rem 0;
 }
-#section-2 .project .project-img {
-  width: 1024px;
-  height: 768px;
+#section-2 .project__url {
+  border-bottom: 2px solid transparent;
+  transition: 300ms;
+}
+#section-2 .project__url:hover {
+  border-bottom: 2px solid currentColor;
+}
+#section-2 .project__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+#section-2 .project__img {
+  border-radius: 5px;
+  max-width: 100%;
+}
+#section-2 .project__img--big {
+  grid-column: span 2;
+}
+#section-2 .project__img--small {
+  grid-column: span 1;
 }
 
 /*# sourceMappingURL=main.css.map */

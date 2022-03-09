@@ -1,27 +1,60 @@
 #section-2 {
+    scroll-snap-align: start;
     background: white;
     position: relative;
-    overflow: hidden;
-    .section-container {
-    }
     .container {
-        padding: 5rem 3rem;
-        max-width: 50rem;
+        padding: 3rem 3rem;
+        max-width: 60rem;
         margin: auto;
     }
     .title {
         font-size: 7rem;
     }
-    p {
-        margin: 2rem 0;
-    }
     .project {
-        margin: 2rem;
-        padding: 2rem;
-        background-size: cover;
-        .project-img {
-            width: 1024px;
-            height: 768px;
+        scroll-snap-align: start;
+        padding-top: 3rem;
+        @mixin borderbottom {
+            border-bottom: 10px solid currentColor;
         }
+        &__num {
+            font-size: 4rem;
+            margin-bottom: -6rem;
+            text-align: right;
+        }
+        &__title {
+            @include borderbottom();
+            font-size: 3rem;
+            margin: 2rem 0;
+        }
+        &__desc {
+            text-align: justify;
+            margin: 2rem 0;
+        }
+        &__url {
+            border-bottom: 2px solid transparent;
+            transition: 300ms;
+        }
+        &__url:hover {
+            border-bottom: 2px solid currentColor;
+        }
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            padding: 2rem 0;
+        }
+        &__img {
+            // border: 2px solid currentColor;
+            border-radius: 5px;
+            max-width: 100%;
+            &--big {
+                grid-column: span 2;
+            }
+            &--small {
+                grid-column: span 1;
+            }
+        }
+        
     }
 }

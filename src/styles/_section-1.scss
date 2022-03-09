@@ -1,4 +1,5 @@
 #section-1 {
+    scroll-snap-align: start;
     background-image: url("./assets/bg.jpg");
     background-size: cover;
     .container {
@@ -28,6 +29,7 @@
             align-items: center;
             transition: 300ms;
         }
+        
         .arrow {
             background-color: currentColor;
             height: 4px;
@@ -52,7 +54,20 @@
             width: 100px;
         }
     }
+
+    .down-arrow {
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transition: 300ms;
+        &:hover {
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+    }
 }
+
 .ballon-container {
     position: absolute;
 }

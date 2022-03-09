@@ -2,11 +2,11 @@
 gsap.registerPlugin(ScrollTrigger)
 gsap.to("#header", {
     scrollTrigger: {
+        scroller: "main",
         trigger: "#section-2",
         start: "top 40%",
         end: "top 80%",
         toggleActions: "play restart reverse",
-        // markers: true,
     },
     duration: 0.5,
     backgroundColor: "rgb(60, 50, 50)",
@@ -26,6 +26,8 @@ for (let i = 1; i <= 4; i++) {
         .getElementById(`section-${i}`)
         .getBoundingClientRect()
     document.getElementById(`nav-item-${i}`).addEventListener("click", () => {
-        window.scrollTo({ top: section.top, behavior: "smooth" })
+        document
+            .querySelector("main")
+            .scrollTo({ top: section.top, behavior: "smooth" })
     })
 }
