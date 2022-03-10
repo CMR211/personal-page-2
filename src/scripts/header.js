@@ -22,12 +22,13 @@ gsap.from("#header", {
 
 // Bind scroll to target section to links in header
 for (let i = 1; i <= 4; i++) {
-    const section = document
-        .getElementById(`section-${i}`)
-        .getBoundingClientRect()
-    document.getElementById(`nav-item-${i}`).addEventListener("click", () => {
-        document
-            .querySelector("main")
-            .scrollTo({ top: section.top, behavior: "smooth" })
-    })
+    const section = document.getElementById(`section-${i}`).getBoundingClientRect()
+    console.log(section)
+    // document.getElementById(`nav-item-${i}`).addEventListener("click", () => {
+        // document.querySelector("main").scrollTo(
+        //     0,
+        //     document.getElementById(`section-${i}`).getBoundingClientRect().top
+        //     // behavior: "smooth",
+        // )
+    // })
 }

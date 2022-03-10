@@ -94,7 +94,6 @@ main {
 }
 
 #section-1 {
-  scroll-snap-align: start;
   background-image: url("./assets/bg.jpg");
   background-size: cover;
 }
@@ -151,7 +150,7 @@ main {
 }
 #section-1 .down-arrow {
   color: white;
-  position: absolute;
+  position: relative;
   bottom: 10px;
   left: 50%;
   transition: 300ms;
@@ -173,10 +172,6 @@ main {
   width: 5rem;
 }
 
-#section-2 {
-  scroll-snap-align: start;
-  position: relative;
-}
 #section-2 .container {
   padding: 3rem 3rem;
   max-width: 60rem;
@@ -217,7 +212,6 @@ main {
   padding: 2rem 0;
 }
 #section-2 .project__img {
-  scroll-snap-align: center;
   border-radius: 5px;
   max-width: 100%;
 }
@@ -226,6 +220,18 @@ main {
 }
 #section-2 .project__img--small {
   grid-column: span 1;
+}
+
+#section-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(./assets/bg2.png);
+}
+#section-3 .container {
+  padding: 3rem 3rem;
+  max-width: 60rem;
+  margin: auto;
+}
+#section-3 .title {
+  font-size: 7rem;
 }
 
 /*# sourceMappingURL=main.css.map */

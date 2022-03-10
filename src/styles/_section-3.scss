@@ -1,0 +1,13 @@
+#section-3 {
+    // scroll-snap-align: start;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(./assets/bg2.png);
+    .container {
+        padding: 3rem 3rem;
+        max-width: 60rem;
+        margin: auto;
+    }
+    .title {
+        font-size: 7rem;
+    }
+
+}
