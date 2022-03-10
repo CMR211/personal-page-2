@@ -1,5 +1,5 @@
 #section-1 {
-    // scroll-snap-align: start;
+    @include snap(start);
     background-image: url("./assets/bg.jpg");
     background-size: cover;
     .container {

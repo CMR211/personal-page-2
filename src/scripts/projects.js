@@ -65,8 +65,8 @@ for (let project of projects) {
 for (let i = 1; i <= projects.length; i++) {
     gsap.from(document.querySelector(`#project-${i}`).children, {
         scrollTrigger: {
+            id: i,
             trigger: `#project-${i}`,
-            scroller: "main",
             start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play reverse play reverse",

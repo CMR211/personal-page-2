@@ -7,3 +7,7 @@ $header-width: 50px;
 @mixin font-regular {
     font-family: "Fira Sans", sans-serif;
 }
+
+@mixin snap($value) {
+    scroll-snap-align: $value;
+}

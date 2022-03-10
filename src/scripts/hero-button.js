@@ -8,8 +8,7 @@ for (let el of heroNav) {
         const section2 = document
             .getElementById("section-2")
             .getBoundingClientRect()
-        document
-            .querySelector("main")
+        window
             .scrollTo({ top: section2.top, behavior: "smooth" })
     })
 }

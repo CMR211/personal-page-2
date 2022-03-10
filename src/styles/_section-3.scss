@@ -1,6 +1,15 @@
 #section-3 {
-    // scroll-snap-align: start;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(./assets/bg2.png);
+    @include snap(start);
+    position: relative;
+    &::before {
+        z-index: -1;
+        position: absolute;
+        opacity: 0.1;
+        background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(./assets/bg2.png);
+        background-size: cover;
+        content: "";
+        inset: 0;
+    }
     .container {
         padding: 3rem 3rem;
         max-width: 60rem;
@@ -9,5 +18,10 @@
     .title {
         font-size: 7rem;
     }
+    p {
+        margin-top: 2rem;
+        text-align: justify;
+    }
+
 
 }

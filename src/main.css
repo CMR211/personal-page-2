@@ -40,22 +40,23 @@ a {
   background-color: rgba(255, 128, 55, 0.3);
 }
 
+p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  height: 100%;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   color: #3c3232;
-  overflow: hidden;
-}
-
-main {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: block mandatory;
+  height: 100%;
 }
 
 #header {
@@ -94,6 +95,7 @@ main {
 }
 
 #section-1 {
+  scroll-snap-align: start;
   background-image: url("./assets/bg.jpg");
   background-size: cover;
 }
@@ -172,6 +174,9 @@ main {
   width: 5rem;
 }
 
+#section-2 {
+  scroll-snap-align: start;
+}
 #section-2 .container {
   padding: 3rem 3rem;
   max-width: 60rem;
@@ -212,6 +217,7 @@ main {
   padding: 2rem 0;
 }
 #section-2 .project__img {
+  scroll-snap-align: center;
   border-radius: 5px;
   max-width: 100%;
 }
@@ -223,7 +229,17 @@ main {
 }
 
 #section-3 {
+  scroll-snap-align: start;
+  position: relative;
+}
+#section-3::before {
+  z-index: -1;
+  position: absolute;
+  opacity: 0.1;
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(./assets/bg2.png);
+  background-size: cover;
+  content: "";
+  inset: 0;
 }
 #section-3 .container {
   padding: 3rem 3rem;
@@ -232,6 +248,14 @@ main {
 }
 #section-3 .title {
   font-size: 7rem;
+}
+#section-3 p {
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+#section-4 {
+  scroll-snap-align: start;
 }
 
 /*# sourceMappingURL=main.css.map */
