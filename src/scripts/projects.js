@@ -12,6 +12,15 @@ const projects = [
     },
     {
         id: 2,
+        title: "FEM Space tourism website",
+        desc: "My take on frontendmentor.io challenge of creating a responsive space tourism website. As a self goal I have added a possibility to refreshlessly change the language. This was my first project I tried React, learning everything on the fly.",
+        url: "https://cmr211-fem-space-tourism-website.netlify.app",
+        folder: "./assets/space-tourism-website/",
+        bigImgs: 4,
+        smallImgs: 4,
+    },
+    {
+        id: 3,
         title: "Advent of code",
         desc: "These are my solutions to advent of code 2021 problems. Solved with javascript. Currently half way done.",
         url: "https://github.com/CMR211/advent-of-code",
@@ -21,17 +30,7 @@ const projects = [
         bgcolor: "#39304a",
         color: "white"
     },
-    {
-        id: 3,
-        title: "FEM Space tourism website",
-        desc: "My take on frontendmentor.io challenge of creating a responsive space tourism website. As a self goal I have added a possibility to refreshlessly change the language. This was my first project I tried React, learning everything on the fly.",
-        url: "https://cmr211-fem-space-tourism-website.netlify.app",
-        folder: "./assets/space-tourism-website/",
-        bigImgs: 4,
-        smallImgs: 4,
-        bgcolor: "#2E365B",
-        color: "white"
-    },
+    
 ]
 
 for (let project of projects) {
@@ -66,8 +65,8 @@ for (let project of projects) {
 for (let i = 1; i <= projects.length; i++) {
     gsap.from(document.querySelector(`#project-${i}`).children, {
         scrollTrigger: {
+            id: i,
             trigger: `#project-${i}`,
-            scroller: "main",
             start: "top 80%",
             end: "bottom 20%",
             toggleActions: "play reverse play reverse",
@@ -79,18 +78,4 @@ for (let i = 1; i <= projects.length; i++) {
     })
 }
 
-for (let i = 1; i <= projects.length; i++) {
-    gsap.to("main", {
-        scrollTrigger: {
-            trigger: `#project-${i}`,
-            scroller: "main",
-            start: "top center",
-            end: "bottom center",
-            toggleActions: "play reset play reset",
-            markers: true,
-        },
-        backgroundColor: projects[i - 1].bgcolor,
-        color: projects[i-1].color,
-        duration: 0,
-    })
-}
+

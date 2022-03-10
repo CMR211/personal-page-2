@@ -1,5 +1,5 @@
 #section-1 {
-    scroll-snap-align: start;
+    @include snap(start);
     background-image: url("./assets/bg.jpg");
     background-size: cover;
     .container {
@@ -57,7 +57,7 @@
 
     .down-arrow {
         color: white;
-        position: absolute;
+        position: relative;
         bottom: 10px;
         left: 50%;
         transition: 300ms;

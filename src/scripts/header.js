@@ -2,7 +2,6 @@
 gsap.registerPlugin(ScrollTrigger)
 gsap.to("#header", {
     scrollTrigger: {
-        scroller: "main",
         trigger: "#section-2",
         start: "top 40%",
         end: "top 80%",
@@ -22,12 +21,7 @@ gsap.from("#header", {
 
 // Bind scroll to target section to links in header
 for (let i = 1; i <= 4; i++) {
-    const section = document
-        .getElementById(`section-${i}`)
-        .getBoundingClientRect()
     document.getElementById(`nav-item-${i}`).addEventListener("click", () => {
-        document
-            .querySelector("main")
-            .scrollTo({ top: section.top, behavior: "smooth" })
+        document.querySelector(`#section-${i}`).scrollIntoView()
     })
 }

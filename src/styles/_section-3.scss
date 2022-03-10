@@ -1,0 +1,27 @@
+#section-3 {
+    @include snap(start);
+    position: relative;
+    &::before {
+        z-index: -1;
+        position: absolute;
+        opacity: 0.1;
+        background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(./assets/bg2.png);
+        background-size: cover;
+        content: "";
+        inset: 0;
+    }
+    .container {
+        padding: 3rem 3rem;
+        max-width: 60rem;
+        margin: auto;
+    }
+    .title {
+        font-size: 7rem;
+    }
+    p {
+        margin-top: 2rem;
+        text-align: justify;
+    }
+
+
+}

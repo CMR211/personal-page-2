@@ -2,18 +2,14 @@
 
 html {
     scroll-behavior: smooth;
-    overflow: hidden;
+    height: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
 }
 
 body {
     @include font-regular;
     font-weight: 400;
     color: rgb(60, 50, 50);
-    overflow: hidden;
-}
-
-main {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: block mandatory;
+    height: 100%;
 }
