@@ -33,7 +33,6 @@ section1scroll
             start: "top 80%",
             end: "20% 10%",
             toggleActions: "restart reverse restart pause",
-            markers: true,
         },
     })
     section3scroll
