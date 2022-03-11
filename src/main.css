@@ -231,6 +231,7 @@ body {
 #section-3 {
   scroll-snap-align: start;
   position: relative;
+  padding-bottom: 10rem;
 }
 #section-3::before {
   z-index: -1;
@@ -246,11 +247,30 @@ body {
   max-width: 60rem;
   margin: auto;
 }
-#section-3 .title {
+#section-3 .about__title {
   font-size: 7rem;
 }
-#section-3 p {
+#section-3 .about__par {
   margin-top: 2rem;
+  text-align: justify;
+}
+#section-3 .about__grid {
+  scroll-snap-align: center;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+#section-3 .about__grid .bold {
+  font-weight: 600;
+}
+#section-3 .about__grid .grid__img {
+  align-self: center;
+  grid-column: span 1;
+  width: 100%;
+}
+#section-3 .about__grid .grid__par {
+  grid-column: span 5;
   text-align: justify;
 }
 
