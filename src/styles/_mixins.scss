@@ -9,5 +9,6 @@ $header-width: 50px;
 }
 
 @mixin snap($value) {
-    scroll-snap-align: $value;
+    // scroll-snap-align: $value;
+    // scroll-snap-stop: always;
 }

@@ -95,7 +95,6 @@ body {
 }
 
 #section-1 {
-  scroll-snap-align: start;
   background-image: url("./assets/bg.jpg");
   background-size: cover;
 }
@@ -174,9 +173,6 @@ body {
   width: 5rem;
 }
 
-#section-2 {
-  scroll-snap-align: start;
-}
 #section-2 .container {
   padding: 3rem 3rem;
   max-width: 60rem;
@@ -217,7 +213,6 @@ body {
   padding: 2rem 0;
 }
 #section-2 .project__img {
-  scroll-snap-align: center;
   border-radius: 5px;
   max-width: 100%;
 }
@@ -229,7 +224,6 @@ body {
 }
 
 #section-3 {
-  scroll-snap-align: start;
   position: relative;
   padding-bottom: 10rem;
 }
@@ -255,7 +249,6 @@ body {
   text-align: justify;
 }
 #section-3 .about__grid {
-  scroll-snap-align: center;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -272,10 +265,6 @@ body {
 #section-3 .about__grid .grid__par {
   grid-column: span 5;
   text-align: justify;
-}
-
-#section-4 {
-  scroll-snap-align: start;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -35,7 +35,6 @@ const section3scroll = gsap.timeline({
         start: "top 80%",
         end: "70% 10%",
         toggleActions: "restart reverse restart pause",
-        markers: true,
     },
 })
 
