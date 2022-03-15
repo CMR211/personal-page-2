@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
     <title>Bartosz Surma</title>
 </head>
 
@@ -72,19 +73,26 @@
 
                     <img class="grid__img" src="./assets/logos/javascript.svg" />
                     <p class="grid__par">
-                        <span class="bold">Javascript + ES6 syntax</span> modules, let, const, spread and rest, array methods (map, filter, reduce etc.), string literals, async/await and .then, destructuring, arrow functions, fetch API, DOM manipulations, animations with GSAP. Local and session storage.
+                        <span class="bold">Javascript + ES6 syntax</span> modules, let, const, spread and rest, array
+                        methods (map, filter, reduce etc.), string literals, async/await and .then, destructuring, arrow
+                        functions, fetch API, DOM manipulations, animations with GSAP. Local and session storage.
                     </p>
-                    
+
                     <p class="grid__par">
-                        <span class="bold">SaSS/SCSS/CSS</span> functions, mixins, imports, extends, sass variables and native css variables, BEM, basic usage of Bootstrap, grid, flex. I'm a big fan of css and scss. I&nbsp;really enjoy watching youtubers specializing in css and often I&nbsp;recreate their designs as a form relaxation. 
+                        <span class="bold">SaSS/SCSS/CSS</span> functions, mixins, imports, extends, sass variables and
+                        native css variables, BEM, basic usage of Bootstrap, grid, flex. I'm a big fan of css and scss.
+                        I&nbsp;really enjoy watching youtubers specializing in css and often I&nbsp;recreate their
+                        designs as a form relaxation.
                     </p>
                     <img class="grid__img" src="./assets/logos/sass.svg" />
 
                     <img class="grid__img" src="./assets/logos/react.svg" />
                     <p class="grid__par">
-                        <span class="bold">React 16.8+</span> functional components, hooks (useState, useEffect, useContext, useReducer, useRef), create-react-app, JSX, axios, react router, animations: framer motion, react transition group. CSS in JS.
+                        <span class="bold">React 16.8+</span> functional components, hooks (useState, useEffect,
+                        useContext, useReducer, useRef), create-react-app, JSX, axios, react router, animations: framer
+                        motion, react transition group. CSS in JS.
                     </p>
-                    
+
                 </div>
             </div>
         </div>
@@ -93,9 +101,49 @@
     <section class="section" id="section-4">
         <div class="section-container" id="section-4_link">
             <div class="container">
-                <h1 class="title anim4">Contact</h1>
+                <h1 class="contact__title anim4">Contact</h1>
 
+                <div class="contact__grid">
 
+                    <div class="column column--left">
+
+                        <div class="column--left__item column--left__item--wide">
+                            <p class="contact__par">Feel free to ask me anything. Don't forget to take a look at my
+                                social profiles, github included.</p>
+                        </div>
+                        <div class="column--left__item">
+                            <i class="lni lni-github-original"></i>
+                            <p>Github @cmr211</p>
+                        </div>
+                        <div class="column--left__item">
+                            <i class="lni lni-linkedin-original"></i>
+                            <p>LinkedIn</p>
+                        </div>
+                        <div class="column--left__item">
+                            <i class="lni lni-envelope"></i>
+                            <p>bartosz.surma211@gmail.com</p>
+                        </div>
+                        <div class="column--left__item column--left__item--wide">
+                            <p class="contact__par">Alternatively you may choose to contact me via form on this page.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="column column--right">
+
+                        <form action="" method="post">
+                            <label class="form__label" for="form__author">Your name</label>
+                            <input type="text" name="author" id="form__author">
+                            <label class="form__label" for="form__email">Email</label>
+                            <input type="email" name="author" id="form__email">
+                            <label class="form__label" for="form__message">Message</label>
+                            <textarea type="text" name="message" id="form__message" ></textarea>   
+                            <input type="submit" value="Submit" id="form__submit"> 
+                        </form>
+
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -111,7 +159,7 @@
     <script src="scripts/animations.js"></script>
     <script src="scripts/various.js"></script>
     <script src="scripts/header.js"></script>
-    <script src="scripts/scroll.js"></script>
+    <script src="scripts/myScroll.js"></script>
 </body>
 
 </html>

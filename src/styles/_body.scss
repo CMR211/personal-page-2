@@ -4,10 +4,10 @@ html {
     scroll-behavior: smooth;
     height: 100%;
     overflow: auto;
-    scroll-snap-type: y mandatory;
 }
 
 body {
+    scroll-behavior: smooth;
     @include font-regular;
     font-weight: 400;
     color: rgb(60, 50, 50);

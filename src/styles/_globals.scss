@@ -32,3 +32,11 @@ p {
     line-height: 1.8;
     font-size: 1.2rem;
 }
+
+.snap-mandatory {
+    scroll-snap-type: y mandatory;
+}
+
+.snap-proximity {
+    scroll-snap-type: none;
+}
