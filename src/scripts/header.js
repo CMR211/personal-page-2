@@ -22,6 +22,8 @@ gsap.from("#header", {
 // Bind scroll to target section to links in header
 for (let i = 1; i <= 4; i++) {
     document.getElementById(`nav-item-${i}`).addEventListener("click", () => {
+        disableScrollSnap = true
         document.querySelector(`#section-${i}`).scrollIntoView()
+        setTimeout(() => (disableScrollSnap = false), 1000)
     })
 }
