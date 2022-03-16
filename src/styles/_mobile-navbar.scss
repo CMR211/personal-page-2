@@ -1,0 +1,45 @@
+.navbar {
+    --radius: 130vmax;
+
+    position: fixed;
+    top: calc(-1 * var(--radius) - 25vh);
+    left: calc(-1 * var(--radius) + 50vw);
+    width: calc(var(--radius) * 2);
+    height: calc(var(--radius) * 2);
+    border-radius: 50%;
+    background-color: rgba(white, 1);
+    color: rgb(60, 50, 50);
+    z-index: 100;
+
+    .container {
+
+        padding-bottom: 8rem;
+        height: 100%;
+    }
+
+    ul {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        text-decoration: none;
+        list-style: none;
+
+    }
+
+    li {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    i {
+        font-size: 3rem;
+    }
+}
+
+.hidden {
+    display: none;
+}
