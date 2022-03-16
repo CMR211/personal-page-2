@@ -6,7 +6,7 @@
         margin: auto;
     }
     .title {
-        font-size: 7rem;
+        @include title
     }
     .project {
         padding-top: 3rem;
@@ -17,19 +17,33 @@
             font-size: 4rem;
             margin-bottom: -6rem;
             text-align: right;
+            @media (max-width: $brk) {
+                font-size: 2rem;
+                margin-bottom: -3rem;
+            }
         }
         &__title {
             @include borderbottom();
             font-size: 3rem;
             margin: 2rem 0;
+            @media (max-width: $brk) {
+                font-size: 1.7rem;
+            }
         }
         &__desc {
             text-align: justify;
             margin: 2rem 0;
+            @media (max-width: $brk) {
+                font-size: 1rem;
+            }
         }
         &__url {
             border-bottom: 2px solid transparent;
             transition: 300ms;
+            @media (max-width: $brk) {
+                text-align: right;
+                line-height: 1.7;
+            }
         }
         &__url:hover {
             border-bottom: 2px solid currentColor;

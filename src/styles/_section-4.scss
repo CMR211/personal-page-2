@@ -6,20 +6,29 @@
         margin: auto;
     }
     .contact__title {
-        font-size: 7rem;
+        @include title;
         margin-bottom: 3rem;
     }
     .contact__par {
         margin-top: 2rem;
         text-align: justify;
+        @media (max-width: $brk) {
+            font-size: 1.1rem;
+        }
     }
     .contact__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
+        @media (max-width: $brk) {
+            display: block;
+        }
     }
     .column--left {
         display: grid;
+        @media (max-width: $brk) {
+            display: block;
+        }
         gap: 1rem;
         * {
             margin: 0;
@@ -30,6 +39,14 @@
             gap: 1rem;
             justify-content: center;
             align-items: center;
+            @media (max-width: $brk) {
+                margin: 1rem 0;
+            }
+            .socials__desc {
+                @media (max-width: $brk) {
+                    font-size: 0.8rem;
+                }
+            }
         }
         &__item--wide {
             align-items: center;

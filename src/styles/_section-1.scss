@@ -8,28 +8,46 @@
     }
     .hero {
         padding: 20vh 3rem;
+        @media (max-width: $brk) {
+            padding-top: 15vh;
+        }
         max-width: max-content;
         &__subtitle {
-            font-size: clamp(1rem, 5vw, 2rem);
+            font-size: clamp(1.3rem, 5vw, 2rem);
         }
         &__title {
             @include font-regular;
-            font-size: clamp(3rem, 10vw, 7rem);
+            font-size: clamp(3.5rem, 10vw, 7rem);
             margin: 0.5rem 0 0.5rem -0.8rem;
             letter-spacing: 4px;
+            @media (max-width: $brk) {
+                margin: 2rem 0;
+            }
         }
         .suffix {
             text-align: right;
+            @media (max-width: $brk) {
+                text-align: left;
+            }
         }
         .btn {
-            font-size: clamp(0.8rem, 4vw, 1.5rem);
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
             margin-top: 2rem;
             float: right;
             display: flex;
             align-items: center;
             transition: 300ms;
+            @media (max-width: $brk) {
+                position: absolute;
+                background: rgba(white, 0.2);
+                padding: 1rem;
+                width: 100vw;
+                left: 0;
+                display: flex;
+                justify-content: center;
+            }
         }
-        
+
         .arrow {
             background-color: currentColor;
             height: 4px;
@@ -66,16 +84,4 @@
             cursor: pointer;
         }
     }
-}
-
-.ballon-container {
-    position: absolute;
-}
-
-.ballon {
-    z-index: 0;
-    color: #c28555;
-    position: absolute;
-    transform: rotate(-1deg);
-    width: 5rem;
 }

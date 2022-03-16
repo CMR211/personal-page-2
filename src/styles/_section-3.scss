@@ -17,18 +17,23 @@
         margin: auto;
     }
     .about__title {
-        font-size: 7rem;
+        @include title
     }
     .about__par {
         margin-top: 2rem;
         text-align: justify;
+        @media (max-width: $brk) {
+            font-size: 1.1rem;
+        }
     }
     .about__grid {
-        @include snap(center);
         margin-top: 2rem;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 2rem;
+        @media (max-width: $brk) {
+            grid-template-columns: 1fr;
+        }
         .bold {
             font-weight: 600;
         }
@@ -36,11 +41,29 @@
             align-self: center;
             grid-column: span 1;
             width: 100%;
+            @media (max-width: $brk) {
+                width: 60%;
+                max-width: 8rem;
+                justify-self: center;
+                margin-top: 2rem;
+            }
         }
         .grid__par {
             grid-column: span 5;
             text-align: justify;
+            @media (max-width: $brk) {
+                grid-column: span 1;
+                font-size: 1rem;
+            }
         }
+        @for $i from 1 to 7 {
+            #grid__el#{$i} { order: $i }
+        }
+        @media (min-width: $brk) {
+            #grid__el3 { order: 4 }
+            #grid__el4 { order: 3 }
+        }
+
     }
 
 }
