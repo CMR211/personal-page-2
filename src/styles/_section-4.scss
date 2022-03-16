@@ -20,7 +20,7 @@
     }
     .column--left {
         display: grid;
-        gap: 2rem;
+        gap: 1rem;
         * {
             margin: 0;
         }
@@ -32,6 +32,8 @@
             align-items: center;
         }
         &__item--wide {
+            align-items: center;
+            padding: 0;
             display: block;
         }
         i {

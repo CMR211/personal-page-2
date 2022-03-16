@@ -304,7 +304,7 @@ body {
 }
 #section-4 .column--left {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 #section-4 .column--left * {
   margin: 0;
@@ -317,6 +317,8 @@ body {
   align-items: center;
 }
 #section-4 .column--left__item--wide {
+  align-items: center;
+  padding: 0;
   display: block;
 }
 #section-4 .column--left i {
