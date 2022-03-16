@@ -15,12 +15,13 @@
     <header id="header">
         <div class="container">
             <p class="logo">βS.</p>
-            <ul>
-                <li class="nav-item"><button class="btn" id="nav-item-1">Home</button></li>
-                <li class="nav-item"><button class="btn" id="nav-item-2">My portfolio</button></li>
-                <li class="nav-item"><button class="btn" id="nav-item-3">About me</button></li>
-                <li class="nav-item"><button class="btn" id="nav-item-4">Contact</button></li>
+            <ul class="desktop">
+                <li class="nav-item desktop"><button class="btn" id="nav-item-1">Home</button></li>
+                <li class="nav-item desktop"><button class="btn" id="nav-item-2">My portfolio</button></li>
+                <li class="nav-item desktop"><button class="btn" id="nav-item-3">About me</button></li>
+                <li class="nav-item desktop"><button class="btn" id="nav-item-4">Contact</button></li>
             </ul>
+            <i class="mobile menu lni lni-menu"></i>
         </div>
     </header>
 
@@ -71,23 +72,23 @@
 
                 <div class="about__grid anim3b">
 
-                    <img class="grid__img" src="./assets/logos/javascript.svg" />
-                    <p class="grid__par">
+                    <img id="grid__el1" class="grid__img" src="./assets/logos/javascript.svg" />
+                    <p id="grid__el2" class="grid__par">
                         <span class="bold">Javascript + ES6 syntax</span> modules, let, const, spread and rest, array
                         methods (map, filter, reduce etc.), string literals, async/await and .then, destructuring, arrow
                         functions, fetch API, DOM manipulations, animations with GSAP. Local and session storage.
                     </p>
 
-                    <p class="grid__par">
+                    <img id="grid__el3" class="grid__img" src="./assets/logos/sass.svg" />
+                    <p id="grid__el4" class="grid__par">
                         <span class="bold">SaSS/SCSS/CSS</span> functions, mixins, imports, extends, sass variables and
                         native css variables, BEM, basic usage of Bootstrap, grid, flex. I'm a big fan of css and scss.
                         I&nbsp;really enjoy watching youtubers specializing in css and often I&nbsp;recreate their
                         designs as a form relaxation.
                     </p>
-                    <img class="grid__img" src="./assets/logos/sass.svg" />
 
-                    <img class="grid__img" src="./assets/logos/react.svg" />
-                    <p class="grid__par">
+                    <img id="grid__el5" class="grid__img" src="./assets/logos/react.svg" />
+                    <p id="grid__el6" class="grid__par">
                         <span class="bold">React 16.8+</span> functional components, hooks (useState, useEffect,
                         useContext, useReducer, useRef), create-react-app, JSX, axios, react router, animations: framer
                         motion, react transition group. CSS in JS.
@@ -113,15 +114,15 @@
                         </div>
                         <div class="column--left__item">
                             <i class="lni lni-github-original"></i>
-                            <p>Github @cmr211</p>
+                            <p class="socials__desc">Github @cmr211</p>
                         </div>
                         <div class="column--left__item">
                             <i class="lni lni-linkedin-original"></i>
-                            <p>LinkedIn</p>
+                            <p class="socials__desc">LinkedIn</p>
                         </div>
                         <div class="column--left__item">
                             <i class="lni lni-envelope"></i>
-                            <p>bartosz.surma211@gmail.com</p>
+                            <p class="socials__desc">bartosz.surma211@gmail.com</p>
                         </div>
                         <div class="column--left__item column--left__item--wide">
                             <p class="contact__par">Alternatively you may choose to contact me via form on this page.

@@ -11,3 +11,7 @@ $header-width: 50px;
 @mixin snap($value) {
     scroll-snap-align: $value;
 }
+
+@mixin title {
+    font-size: clamp(4rem, 10vw, 7rem)
+}

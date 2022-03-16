@@ -1,0 +1,11 @@
+.desktop {
+    @media (max-width: $brk) {
+        display: none !important;
+    }
+}
+
+.mobile {
+    @media (min-width: calc($brk + 1px)) {
+        display: none !important;
+    }
+}
