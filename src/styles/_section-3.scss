@@ -2,11 +2,13 @@
     @include snap(start);
     position: relative;
     padding-bottom: 10rem;
+    --opacity-rule: 0.1;
     &::before {
         z-index: -1;
         position: absolute;
-        opacity: 0.1;
-        background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url(./assets/bg2.png);
+        opacity: var(--opacity-rule);
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+            url(./assets/bg2.png);
         background-size: cover;
         content: "";
         inset: 0;
@@ -17,7 +19,7 @@
         margin: auto;
     }
     .about__title {
-        @include title
+        @include title;
     }
     .about__par {
         margin-top: 2rem;
@@ -36,16 +38,21 @@
         }
         .bold {
             font-weight: 600;
+            color: $color-accent;
         }
         .grid__img {
+            transition: 300ms;
             align-self: center;
             grid-column: span 1;
-            width: 100%;
+            font-size: 8rem;
             @media (max-width: $brk) {
-                width: 60%;
+                font-size: 5rem;
                 max-width: 8rem;
                 justify-self: center;
                 margin-top: 2rem;
+            }
+            &:hover {
+                color: $color-accent;
             }
         }
         .grid__par {
@@ -57,13 +64,26 @@
             }
         }
         @for $i from 1 to 7 {
-            #grid__el#{$i} { order: $i }
+            #grid__el#{$i} {
+                order: $i;
+            }
         }
         @media (min-width: $brk) {
-            #grid__el3 { order: 4 }
-            #grid__el4 { order: 3 }
+            #grid__el3 {
+                order: 4;
+            }
+            #grid__el4 {
+                order: 3;
+            }
         }
-
     }
+}
 
+.white-animation {
+    z-index: 1;
+    background-color: white;
+    height: 1;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }

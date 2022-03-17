@@ -1,6 +1,7 @@
 #section-1 {
     @include snap(start);
     background-image: url("./assets/bg.jpg");
+    // Photo by Meiying Ng on Unsplash
     background-size: cover;
     .container {
         max-width: 60rem;

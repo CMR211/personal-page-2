@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <title>Bartosz Surma</title>
 </head>
 
@@ -16,7 +17,8 @@
         <div class="container">
             <ul>
                 <li class="nav-item nav-item-mobile"><button class="btn" id="nav-item-1-mobile">Home</button></li>
-                <li class="nav-item nav-item-mobile"><button class="btn" id="nav-item-2-mobile">My portfolio</button></li>
+                <li class="nav-item nav-item-mobile"><button class="btn" id="nav-item-2-mobile">My portfolio</button>
+                </li>
                 <li class="nav-item nav-item-mobile"><button class="btn" id="nav-item-3-mobile">About me</button></li>
                 <li class="nav-item nav-item-mobile"><button class="btn" id="nav-item-4-mobile">Contact</button></li>
                 <li class="nav-item" id="navbar-close"><i class="lni lni-cross-circle"></i></li>
@@ -70,7 +72,7 @@
 
     <section class="section" id="section-3">
         <div class="section-container" id="section-3_link">
-            <div class="container">
+            <div class="container" id="section-3-container">
                 <h1 class="about__title anim3a">About me</h1>
                 <p class="about__par anim3b">I realized I have quite a fascination in design in university,writing my
                     thesis, when I spent more time polishing the look of it, optimizing the layout, typography, than
@@ -82,16 +84,18 @@
                     during my work in engineering field I was always deeply concerned about the design, layout, style
                     and typography in every piece of documentation I was developing.</p>
 
-                <div class="about__grid anim3b">
+                <div class="about__grid anim3b" id="section-3-grid">
 
-                    <img id="grid__el1" class="grid__img" src="./assets/logos/javascript.svg" />
+                    <!-- <img id="grid__el1" class="grid__img" src="./assets/logos/javascript.svg" /> -->
+                    <i id="grid__el1" class="grid__img lni lni-javascript"></i>
                     <p id="grid__el2" class="grid__par">
                         <span class="bold">Javascript + ES6 syntax</span> modules, let, const, spread and rest, array
                         methods (map, filter, reduce etc.), string literals, async/await and .then, destructuring, arrow
                         functions, fetch API, DOM manipulations, animations with GSAP. Local and session storage.
                     </p>
 
-                    <img id="grid__el3" class="grid__img" src="./assets/logos/sass.svg" />
+                    <!-- <img id="grid__el3" class="grid__img" src="./assets/logos/sass.svg" /> -->
+                    <i id="grid__el3" class="grid__img fa-brands fa-sass"></i>
                     <p id="grid__el4" class="grid__par">
                         <span class="bold">SaSS/SCSS/CSS</span> functions, mixins, imports, extends, sass variables and
                         native css variables, BEM, basic usage of Bootstrap, grid, flex. I'm a big fan of css and scss.
@@ -99,7 +103,8 @@
                         designs as a form relaxation.
                     </p>
 
-                    <img id="grid__el5" class="grid__img" src="./assets/logos/react.svg" />
+                    <!-- <img id="grid__el5" class="grid__img" src="./assets/logos/react.svg" /> -->
+                    <i id="grid__el5" class="grid__img lni lni-react"></i>
                     <p id="grid__el6" class="grid__par">
                         <span class="bold">React 16.8+</span> functional components, hooks (useState, useEffect,
                         useContext, useReducer, useRef), create-react-app, JSX, axios, react router, animations: framer
@@ -109,6 +114,7 @@
                 </div>
             </div>
         </div>
+        <div class="white-animation"></div>
     </section>
 
     <section class="section" id="section-4">
@@ -124,18 +130,19 @@
                             <p class="contact__par">Feel free to ask me anything. Don't forget to take a look at my
                                 social profiles, github included.</p>
                         </div>
-                        <div class="column--left__item">
+                        <a class="column--left__item contact-item" href="http://github.com/cmr211">
                             <i class="lni lni-github-original"></i>
                             <p class="socials__desc">Github @cmr211</p>
-                        </div>
-                        <div class="column--left__item">
+                        </a>
+                        <a class="column--left__item contact-item"
+                            href="https://www.linkedin.com/in/bartosz-surma-00b6a41a1/">
                             <i class="lni lni-linkedin-original"></i>
                             <p class="socials__desc">LinkedIn</p>
-                        </div>
-                        <div class="column--left__item">
+                        </a>
+                        <a class="column--left__item contact-item" href="mailto:bartosz.surma211@gmail.com">
                             <i class="lni lni-envelope"></i>
                             <p class="socials__desc">bartosz.surma211@gmail.com</p>
-                        </div>
+                        </a>
                         <div class="column--left__item column--left__item--wide">
                             <p class="contact__par">Alternatively you may choose to contact me via form on this page.
                             </p>

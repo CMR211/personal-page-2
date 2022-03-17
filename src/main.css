@@ -216,6 +216,7 @@ body {
   padding-top: 3rem;
 }
 #section-2 .project__num {
+  color: #FF006F;
   font-size: 4rem;
   margin-bottom: -6rem;
   text-align: right;
@@ -280,11 +281,12 @@ body {
   scroll-snap-align: start;
   position: relative;
   padding-bottom: 10rem;
+  --opacity-rule: 0.1;
 }
 #section-3::before {
   z-index: -1;
   position: absolute;
-  opacity: 0.1;
+  opacity: var(--opacity-rule);
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(./assets/bg2.png);
   background-size: cover;
   content: "";
@@ -320,19 +322,24 @@ body {
 }
 #section-3 .about__grid .bold {
   font-weight: 600;
+  color: #FF006F;
 }
 #section-3 .about__grid .grid__img {
+  transition: 300ms;
   align-self: center;
   grid-column: span 1;
-  width: 100%;
+  font-size: 8rem;
 }
 @media (max-width: 620px) {
   #section-3 .about__grid .grid__img {
-    width: 60%;
+    font-size: 5rem;
     max-width: 8rem;
     justify-self: center;
     margin-top: 2rem;
   }
+}
+#section-3 .about__grid .grid__img:hover {
+  color: #FF006F;
 }
 #section-3 .about__grid .grid__par {
   grid-column: span 5;
@@ -371,6 +378,15 @@ body {
   }
 }
 
+.white-animation {
+  z-index: 1;
+  background-color: white;
+  height: 1;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 #section-4 {
   scroll-snap-align: start;
 }
@@ -384,7 +400,7 @@ body {
   margin-bottom: 3rem;
 }
 #section-4 .contact__par {
-  margin-top: 2rem;
+  display: block;
   text-align: justify;
 }
 @media (max-width: 620px) {
@@ -411,10 +427,8 @@ body {
     display: block;
   }
 }
-#section-4 .column--left * {
-  margin: 0;
-}
 #section-4 .column--left__item {
+  transition: 300ms;
   display: grid;
   grid-template-columns: 40px 5fr;
   gap: 1rem;
@@ -428,8 +442,12 @@ body {
 }
 @media (max-width: 620px) {
   #section-4 .column--left__item .socials__desc {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
   }
+}
+#section-4 .column--left .contact-item:hover {
+  color: #ff0062;
 }
 #section-4 .column--left__item--wide {
   align-items: center;
@@ -458,7 +476,7 @@ body {
 }
 #section-4 input:focus,
 #section-4 textarea:focus {
-  border: 2px dotted currentColor;
+  border: 2px solid #FF006F;
   background-color: white;
 }
 #section-4 textarea {
@@ -476,12 +494,12 @@ body {
   cursor: pointer;
 }
 #section-4 #form__submit:hover {
-  border: 2px dotted currentColor;
+  border: 2px dotted #FF006F;
   background-color: white;
 }
 
 .navbar {
-  --radius: 130vmax;
+  --radius: 130vh;
   position: fixed;
   top: calc(-1 * var(--radius) - 25vh);
   left: calc(-1 * var(--radius) + 50vw);
@@ -512,6 +530,7 @@ body {
 }
 .navbar i {
   font-size: 3rem;
+  color: #FF006F;
 }
 
 .hidden {

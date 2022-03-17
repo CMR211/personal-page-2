@@ -14,7 +14,7 @@ const section1scroll = gsap.timeline({
         trigger: "#section-1",
         start: "top 80%",
         end: "20% 10%",
-        toggleActions: "restart reverse restart pause",
+        toggleActions: "play reset play reset",
     },
 })
 
@@ -33,20 +33,36 @@ const section3scroll = gsap.timeline({
     scrollTrigger: {
         trigger: "#section-3",
         start: "top 80%",
-        end: "70% 10%",
-        toggleActions: "restart reverse restart pause",
+        end: "bottom 2%",
+        toggleActions: "play reset play reset",
     },
 })
 
 section3scroll
-    .from(elements("anim3a"), {
+    .from("#section-3", {
+        "--opacity-rule": 0,
+        duration: 2,
+    })
+    .from(document.getElementById("section-3-container").children, {
         delay: 0.1,
         y: -10,
         opacity: 0,
-        stagger: 0.4,
-    })
-    .from(elements("anim3b"), {
-        y: -10,
+        stagger: 0.2,
+    }, "<")
+    .from(document.getElementById("section-3-grid").children, {
+        x: -10,
         opacity: 0,
-        stagger: 0.4,
-    })
+        stagger: 0.3,
+    }, "<")
+
+gsap.to(document.querySelector(".white-animation"), {
+    scrollTrigger: {
+        trigger: "#section-4",
+        start: "top 80%",
+        end: "bottom 10%",
+        toggleActions: "play reset play reset",
+        scrub: true,
+    },
+
+    height: 400,
+})
