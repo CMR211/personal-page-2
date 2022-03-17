@@ -23,13 +23,23 @@ function hamburger() {
     const timeline = gsap.timeline()
     timeline.fromTo(
         ".navbar",
-        { "--radius": "1vmax" },
-        { "--radius": "130vmax", duration: DURATION }
+        { "--radius": "1vh" },
+        { "--radius": "100vh", duration: DURATION }
     )
 
     button.addEventListener("click", () => toggleNavbar())
     close.addEventListener("click", () => toggleNavbar())
     navItems.forEach(el => el.addEventListener("click", () => toggleNavbar()))
+
+    for (let i = 1; i <= 4; i++) {
+        document
+            .getElementById(`nav-item-${i}-mobile`)
+            .addEventListener("click", () => {
+                disableScrollSnap = true
+                document.querySelector(`#section-${i}`).scrollIntoView()
+                setTimeout(() => (disableScrollSnap = false), 1000)
+            })
+    }
 
     function toggleNavbar() {
         if (!active) {
