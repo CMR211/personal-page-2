@@ -1,3 +1,5 @@
+const ACTION_TYPE = "play reverse play reverse"
+
 createProjects()
 
 function createProjects() {
@@ -73,7 +75,7 @@ function createProjects() {
                 trigger: `#project-${i}`,
                 start: "top 80%",
                 end: "bottom 10%",
-                toggleActions: "play reset play reset",
+                toggleActions: ACTION_TYPE,
             },
         })
         timeline
