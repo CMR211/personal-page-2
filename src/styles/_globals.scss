@@ -44,3 +44,9 @@ p {
     scroll-snap-type: none;
 }
 
+.divider {
+    background-color: $color-accent;
+    height: 10px;
+    width: 100vw;
+    transform: scaleX(0);
+}

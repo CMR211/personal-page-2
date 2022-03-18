@@ -53,6 +53,13 @@ p {
   scroll-snap-type: none;
 }
 
+.divider {
+  background-color: #FF006F;
+  height: 10px;
+  width: 100vw;
+  transform: scaleX(0);
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -284,6 +291,7 @@ body {
   --opacity-rule: 0.1;
 }
 #section-3::before {
+  display: none;
   z-index: -1;
   position: absolute;
   opacity: var(--opacity-rule);
