@@ -14,9 +14,7 @@ function dividersAnimation() {
                 trigger: divider,
                 start: "top 90%",
                 end: "bottom 10%",
-                // toggleActions: ACTION_TYPE,
                 scrub: 1,
-                markers: true,
             },
             transform: "scaleX(1)",
         })
